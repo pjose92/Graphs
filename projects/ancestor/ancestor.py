@@ -29,7 +29,7 @@ def earliest_ancestor(ancestors, starting_node):
         graph[pairs[1]].add(pairs[0])
     print(graph)
     
-    #if the starting node is not key of graph(no parent) return -1
+    #if the starting node is not key of graph(not parent) return -1
     if starting_node not in graph:
         return -1
     
