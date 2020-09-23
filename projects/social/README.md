@@ -48,8 +48,13 @@ Note that in this sample, Users 3, 4 and 9 are not in User 1's extended social n
 
 1. To create 100 users with an average of 10 friends each, how many times would you need to call `add_friendship()`? Why?
 
+
+
 2. If you create 1000 users with an average of 5 random friends each, what percentage of other users will be in a particular user's extended social network? What is the average degree of separation between a user and those in his/her extended network?
 
+100 users * 10 friends = 1000 friendship pairs. Friendships are mutual so half of this number add_friendship() would be called 500 times
+
+it will be 99.5%. 5/1000 = .005 which is .5%. 100% - .05% so there is a 99.5% chance that any other users would be in my extended network.
 
 
 ## 4. Stretch Goal
