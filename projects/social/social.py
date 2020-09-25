@@ -114,8 +114,23 @@ class SocialGraph:
                     q.enqueue(f)
                     # save the path for the friend. combine user;s path with frien's ID
                     visited[f] = visited[user] + [f]
-                    
         return visited
+    
+    
+        # #mari batilando solution
+        # visited = {} # a dictionary mapping from node id --> [path from user_Id]
+        # queue = deque() # we need this for a bft
+        # queue.append([user_id])
+        # while len(queue) > 0:
+        #     currPath = queue.popleft()
+        #     currNode = currPath[-1]
+        #     visited[currNode] = currPath # bft guarantees us that this is the shortest path to currNode from user_id
+        #     for friend in self.friendships[currNode]:
+        #         if friend not in visited:
+        #             newPath = currPath.copy()
+        #             newPath.append(friend)
+        #             queue.append(newPath)
+        # return visited 
 
 
 if __name__ == '__main__':
