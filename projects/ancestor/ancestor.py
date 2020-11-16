@@ -29,7 +29,6 @@ def earliest_ancestor(ancestors, starting_node):
         graph[pairs[1]].add(pairs[0])
     print(f"starting node: ", starting_node)  
     
-    
     #if the starting node is not key of graph(not parent) return -1
     if starting_node not in graph:
         return -1
@@ -53,11 +52,10 @@ def earliest_ancestor(ancestors, starting_node):
                     new_path = current_path + [neighbor]
                     queue.enqueue(new_path)
             else:
-                 # check if lenght of current path is bigger than longest path 
+                 # check if length of current path is bigger than longest path 
                 if len(current_path) > longest_path_len or (len(current_path) == longest_path_len and current_node < earliest_ancestor):
                     longest_path_len = len(current_path)
                     # assign current node to earliest ancestor             
                     earliest_ancestor = current_node
     print(f"earliest ancestors are: ", earliest_ancestor)
     return earliest_ancestor
-        
