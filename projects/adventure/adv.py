@@ -59,4 +59,4 @@ while True:
     elif cmds[0] == "q":
         break
     else:
-        print("I did not understand that command.")
+        print("I did not understand that command. Try again")
